@@ -10,8 +10,8 @@ def result msg
 			if msg[:config]
 				team_id = msg[:config][:team]
 			end
-			if msg[:item][:id]
-				item_id = msg[:item][:id]
+			if item = msg[:item]
+				item_id = item[:id]
 			end
 			if msg[:version]
 				version = msg[:version]
