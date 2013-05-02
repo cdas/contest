@@ -16,8 +16,9 @@ def result msg
 			if msg[:version]
 				version = msg[:version]
 			end
-			result = {:msg => "result", :items => [{:id => item_id}], :team => {:id => team_id}, :version => version}
-			#result = {:msg => "result"}
+			# result = {:msg => "result", :items => [{:id => item_id}], :team => {:id => team_id}, :version => version}
+			result = {:msg => "result"}
+			# result = {:msg => "result"}
 			return result.to_json
 		elsif msg["msg"] == "feedback"
 			return result.to_json
@@ -29,5 +30,6 @@ end
 
 post "/" do
 	logger.info "loading data"
+	
 	result(JSON.parse(request.body.read))
 end
