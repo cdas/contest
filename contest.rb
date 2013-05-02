@@ -29,7 +29,7 @@ post '/*' do
 
 	def result msg
 		if config = msg["config"]
-			team_id = config["team"]["id"]
+			team_id = config["team"]
 		end
 		if domain_id = msg["domain"]["id"] 
 			if not @@domainlist.has_key? domain_id
