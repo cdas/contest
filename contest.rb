@@ -17,7 +17,7 @@ def result msg
 				version = msg[:version]
 			end
 			# result = {:msg => "result", :items => [{:id => item_id}], :team => {:id => team_id}, :version => version}
-			result = {:msg => "result"}
+			result = {:msg => "result", :items => [{:id => ""}], :team => {:id => ""}, :version => ""}
 			# result = {:msg => "result"}
 			return result.to_json
 		elsif msg["msg"] == "feedback"
